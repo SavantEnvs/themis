@@ -1,0 +1,9 @@
+project: savantenvs/themis
+target: fuzz_scomparator
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_scomparator/testsuite
+cmds:
+  - cmd: /mayhem/build/mayhem-bin/fuzz_scomparator
+    libfuzzer: true
+    timeout: 5

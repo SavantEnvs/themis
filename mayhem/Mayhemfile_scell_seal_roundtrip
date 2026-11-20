@@ -1,0 +1,9 @@
+project: savantenvs/themis
+target: scell_seal_roundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/scell_seal_roundtrip/testsuite
+cmds:
+  - cmd: /mayhem/build/mayhem-bin/scell_seal_roundtrip @@
+    afl: true
+    timeout: 2

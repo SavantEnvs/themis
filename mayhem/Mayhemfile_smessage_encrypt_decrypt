@@ -1,0 +1,9 @@
+project: savantenvs/themis
+target: smessage_encrypt_decrypt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/smessage_encrypt_decrypt/testsuite
+cmds:
+  - cmd: /mayhem/build/mayhem-bin/smessage_encrypt_decrypt @@
+    afl: true
+    timeout: 2
